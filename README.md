@@ -3,6 +3,4 @@
 
 ![Smooth Animation](/Assets/gifs/easeInOut.gif)
 
-<p align="center">
-  Check out the full article at [Medium](http://www.example.com).
-</p>
+Check out the full article at [Medium](https://medium.com/@joncardasis/better-ios-animations-with-catransaction-72a7425673a6).
