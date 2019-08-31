@@ -1,0 +1,23 @@
+
+Final code with cleanup for the article. Some stuff duplicated from other places.
+
+
+TODO:
+Make a project for animatable properties made easy:
+
+- AnimatableView: UiView with a custom backed layer for handling animation events
+
+// MyUiView: AnimatableView
+let progress = UIAnimatable<CGFloat>(1.0, valueWillChange: { (newValue: CGFloat)
+   progressBarView.frame.width = superview.frame.width * progress
+})
+
+
+
+
+class UIAnimatable<T> {
+    // block will be called in `display` where the user can choose how to layout
+    init(_ initialValue: T, valueWillChange: (newValue: T)->()) {
+
+    }
+}
