@@ -1,63 +1,90 @@
 //
 //  ViewController.swift
-//  delete
+//  Medium-UIKit
 //
-//  Created by Jon Cardasis on 12/31/18.
-//  Copyright © 2018 Jon Cardasis. All rights reserved.
+//  Created by Jon Cardasis on 2/19/19.
+//  Copyright © 2019 Jon Cardasis. All rights reserved.
 //
 
 import UIKit
 
+private let defaultProgressTrackColor = UIColor.blue
+
 class ViewController: UIViewController {
 
-    let happinessMeter = GlobalHappinessProgressView() // GlobalHappinessBarView()
+    private let progressView = ProgressView()
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    private let animatePropertyButton = FancyButton(title: "Animate ✨")
+    private let setPropertyButton = FancyButton(title: "Set")
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupButtons()
+        setupProgressView()
     }
     
-    override func loadView() {
-        let view = UIView()
-        view.backgroundColor = .white
+    private func setupProgressView() {
+        let height: CGFloat = 32.0
         
-        happinessMeter.frame = CGRect(x: 50, y: 200, width: 300, height: 50)
-        happinessMeter.progress = 0.0
-        happinessMeter.color = UIColor.red.cgColor
-        view.addSubview(happinessMeter)
+        progressView.backgroundColor = .lightGray
+        progressView.layer.cornerRadius = height / 2.0
+        progressView.layer.masksToBounds = true
         
-        let btn = UIButton(type: .system)
-        btn.frame = CGRect(x: 50, y: 50, width: 100, height: 50)
-        btn.setTitle("Animate!", for: .normal)
-        btn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        view.addSubview(btn)
+        progressView.color = defaultProgressTrackColor
+        progressView.progress = 0.0
         
-        let btn2 = UIButton(type: .system)
-        btn2.frame = CGRect(x: 150, y: 50, width: 100, height: 50)
-        btn2.setTitle("Set!", for: .normal)
-        btn2.addTarget(self, action: #selector(buttonTapped2), for: .touchUpInside)
-        view.addSubview(btn2)
-        
-        self.view = view
+        progressView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(progressView)
+        NSLayoutConstraint.activate([
+            progressView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            progressView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            progressView.heightAnchor.constraint(equalToConstant: height),
+            progressView.topAnchor.constraint(equalTo: animatePropertyButton.bottomAnchor, constant: 64)
+        ])
     }
     
-    var isExpanded: Bool = false
-    
-    @objc func buttonTapped() {
-        let progress: CGFloat = isExpanded ? 0.0 : 0.65
-        self.isExpanded = !self.isExpanded
+    private func setupButtons() {
+        let buttonSize = CGSize(width: 120, height: 40)
+        let edgePadding: CGFloat = 50.0
+        let topPadding: CGFloat = 100.0
         
-        print("Setting to: \(progress)")
-        UIView.animate(withDuration: 1.5, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
-            self.happinessMeter.progress = progress
+        animatePropertyButton.addTarget(self, action: #selector(animatePressed), for: .touchUpInside)
+        setPropertyButton.addTarget(self, action: #selector(setPressed(sender:)), for: .touchUpInside)
+        
+        animatePropertyButton.translatesAutoresizingMaskIntoConstraints = false
+        setPropertyButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(animatePropertyButton)
+        view.addSubview(setPropertyButton)
+        
+        NSLayoutConstraint.activate([
+            animatePropertyButton.widthAnchor.constraint(equalToConstant: buttonSize.width),
+            animatePropertyButton.heightAnchor.constraint(equalToConstant: buttonSize.height),
+            animatePropertyButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topPadding),
+            animatePropertyButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: edgePadding),
+            
+            setPropertyButton.widthAnchor.constraint(equalToConstant: buttonSize.width),
+            setPropertyButton.heightAnchor.constraint(equalToConstant: buttonSize.height),
+            setPropertyButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topPadding),
+            setPropertyButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -edgePadding)
+        ])
+    }
+    
+    @objc private func animatePressed() {
+        // Reset
+        progressView.progress = 0.0
+        progressView.color = defaultProgressTrackColor
+        
+        // Animate the property inside an animation context
+        UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+            self.progressView.progress = 0.8
+            self.progressView.color = .red
         }, completion: nil)
     }
     
-    @objc func buttonTapped2() {
-        let progress: CGFloat = isExpanded ? 0.0 : 1.0
-        self.isExpanded = !self.isExpanded
+    @objc private func setPressed(sender: FancyButton) {
+        let newProgress: CGFloat = progressView.progress > 0 ? 0.0 : 1.0
         
-        print("Setting to: \(progress)")
-        self.happinessMeter.progress = progress
+        // Set the value, reflecting immediately
+        progressView.progress = newProgress
     }
 }
-

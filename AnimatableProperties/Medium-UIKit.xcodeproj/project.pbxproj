@@ -9,40 +9,23 @@
 /* Begin PBXBuildFile section */
 		FC090B9F231964C8008E28F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC090B9E231964C8008E28F6 /* ViewController.swift */; };
 		FC090BA1231964D1008E28F6 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC090BA0231964D1008E28F6 /* ProgressView.swift */; };
-		FC090BA323196581008E28F6 /* README in Resources */ = {isa = PBXBuildFile; fileRef = FC090BA223196581008E28F6 /* README */; };
 		FC090BA523196E69008E28F6 /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC090BA423196E69008E28F6 /* FancyButton.swift */; };
-		FC1BD8EA221CD35300817AF3 /* GlobalHappinessBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1BD8E9221CD35300817AF3 /* GlobalHappinessBarView.swift */; };
-		FC1BD8ED221CD3BF00817AF3 /* GlobalHappinessProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1BD8EC221CD3BF00817AF3 /* GlobalHappinessProgressView.swift */; };
-		FC1BD8EF221CD3FA00817AF3 /* CABasicAnimation+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1BD8EE221CD3FA00817AF3 /* CABasicAnimation+Utils.swift */; };
 		FCCD5B3F21D9E211009004A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD5B3E21D9E211009004A0 /* AppDelegate.swift */; };
 		FCCD5B4421D9E211009004A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCD5B4221D9E211009004A0 /* Main.storyboard */; };
 		FCCD5B4621D9E212009004A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCD5B4521D9E212009004A0 /* Assets.xcassets */; };
 		FCCD5B4921D9E212009004A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCD5B4721D9E212009004A0 /* LaunchScreen.storyboard */; };
-		FCCD5B7021D9E24A009004A0 /* UIFont+BestFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD5B6C21D9E249009004A0 /* UIFont+BestFit.swift */; };
-		FCCD5B7121D9E24A009004A0 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD5B6D21D9E249009004A0 /* GradientView.swift */; };
-		FCCD5B7221D9E24A009004A0 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD5B6E21D9E249009004A0 /* UIView+Shadow.swift */; };
-		FCCD5B7321D9E24A009004A0 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD5B6F21D9E24A009004A0 /* UIColor+Hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC090B9E231964C8008E28F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC090BA0231964D1008E28F6 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
-		FC090BA223196581008E28F6 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		FC090BA423196E69008E28F6 /* FancyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
-		FC1BD8E9221CD35300817AF3 /* GlobalHappinessBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHappinessBarView.swift; sourceTree = "<group>"; };
-		FC1BD8EC221CD3BF00817AF3 /* GlobalHappinessProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHappinessProgressView.swift; sourceTree = "<group>"; };
-		FC1BD8EE221CD3FA00817AF3 /* CABasicAnimation+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Utils.swift"; sourceTree = "<group>"; };
+		FC090BA0231964D1008E28F6 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressView.swift; path = BlogArticle/ProgressView.swift; sourceTree = "<group>"; };
+		FC090BA423196E69008E28F6 /* FancyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FancyButton.swift; path = BlogArticle/FancyButton.swift; sourceTree = "<group>"; };
 		FCCD5B3B21D9E211009004A0 /* Medium-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Medium-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCD5B3E21D9E211009004A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCCD5B4021D9E211009004A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FCCD5B4321D9E211009004A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCCD5B4521D9E212009004A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCCD5B4821D9E212009004A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCCD5B4A21D9E212009004A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCCD5B6C21D9E249009004A0 /* UIFont+BestFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+BestFit.swift"; sourceTree = "<group>"; };
-		FCCD5B6D21D9E249009004A0 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		FCCD5B6E21D9E249009004A0 /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
-		FCCD5B6F21D9E24A009004A0 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,27 +39,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC090B9D231964B6008E28F6 /* BlogArticle */ = {
-			isa = PBXGroup;
-			children = (
-				FC090BA0231964D1008E28F6 /* ProgressView.swift */,
-				FC090B9E231964C8008E28F6 /* ViewController.swift */,
-				FC090BA423196E69008E28F6 /* FancyButton.swift */,
-				FC090BA223196581008E28F6 /* README */,
-			);
-			path = BlogArticle;
-			sourceTree = "<group>";
-		};
-		FC1BD8EB221CD35C00817AF3 /* GlobalHappinessBar */ = {
-			isa = PBXGroup;
-			children = (
-				FC1BD8E9221CD35300817AF3 /* GlobalHappinessBarView.swift */,
-				FC1BD8EC221CD3BF00817AF3 /* GlobalHappinessProgressView.swift */,
-				FC1BD8EE221CD3FA00817AF3 /* CABasicAnimation+Utils.swift */,
-			);
-			path = GlobalHappinessBar;
-			sourceTree = "<group>";
-		};
 		FCCD5B3221D9E211009004A0 = {
 			isa = PBXGroup;
 			children = (
@@ -96,14 +58,10 @@
 		FCCD5B3D21D9E211009004A0 /* Medium-UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				FC090B9D231964B6008E28F6 /* BlogArticle */,
-				FC1BD8EB221CD35C00817AF3 /* GlobalHappinessBar */,
-				FCCD5B6D21D9E249009004A0 /* GradientView.swift */,
-				FCCD5B6F21D9E24A009004A0 /* UIColor+Hex.swift */,
-				FCCD5B6C21D9E249009004A0 /* UIFont+BestFit.swift */,
-				FCCD5B6E21D9E249009004A0 /* UIView+Shadow.swift */,
+				FC090BA0231964D1008E28F6 /* ProgressView.swift */,
+				FC090B9E231964C8008E28F6 /* ViewController.swift */,
+				FC090BA423196E69008E28F6 /* FancyButton.swift */,
 				FCCD5B3E21D9E211009004A0 /* AppDelegate.swift */,
-				FCCD5B4021D9E211009004A0 /* ViewController.swift */,
 				FCCD5B4221D9E211009004A0 /* Main.storyboard */,
 				FCCD5B4521D9E212009004A0 /* Assets.xcassets */,
 				FCCD5B4721D9E212009004A0 /* LaunchScreen.storyboard */,
@@ -170,7 +128,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC090BA323196581008E28F6 /* README in Resources */,
 				FCCD5B4921D9E212009004A0 /* LaunchScreen.storyboard in Resources */,
 				FCCD5B4621D9E212009004A0 /* Assets.xcassets in Resources */,
 				FCCD5B4421D9E211009004A0 /* Main.storyboard in Resources */,
@@ -185,14 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC090B9F231964C8008E28F6 /* ViewController.swift in Sources */,
-				FC1BD8ED221CD3BF00817AF3 /* GlobalHappinessProgressView.swift in Sources */,
-				FC1BD8EA221CD35300817AF3 /* GlobalHappinessBarView.swift in Sources */,
-				FCCD5B7221D9E24A009004A0 /* UIView+Shadow.swift in Sources */,
 				FC090BA523196E69008E28F6 /* FancyButton.swift in Sources */,
-				FCCD5B7021D9E24A009004A0 /* UIFont+BestFit.swift in Sources */,
-				FC1BD8EF221CD3FA00817AF3 /* CABasicAnimation+Utils.swift in Sources */,
-				FCCD5B7321D9E24A009004A0 /* UIColor+Hex.swift in Sources */,
-				FCCD5B7121D9E24A009004A0 /* GradientView.swift in Sources */,
 				FCCD5B3F21D9E211009004A0 /* AppDelegate.swift in Sources */,
 				FC090BA1231964D1008E28F6 /* ProgressView.swift in Sources */,
 			);
